@@ -52,13 +52,35 @@ if __name__ == '__main__':
 
     select = Select(browser.find_element_by_name("ResourceId"))
     select.select_by_value("294")
+    time.sleep(5.0)
+
     select = Select(browser.find_element_by_name("OverbookReason"))
     select.select_by_value("Fitness")
-    # select = browser.find_element_by_name("GuestCount")
-    # select.clear()
-    # select.send_keys("0")
-    # select = Select(browser.find_element_by_name("Duration"))
-    # select.select_by_value("60")
+
+    select = browser.find_element_by_name("GuestCount")
+    select.clear()
+    select.send_keys("0")
+
+    select = Select(browser.find_element_by_name("Duration"))
+    select.select_by_value("60")
+    time.sleep(5.0)
+
+    select = browser.find_element_by_name("StartDate")
+    select.clear()
+    select.send_keys("value", "7/3/2021")
+    time.sleep(5.0)
+
+    select = Select(browser.find_element_by_id("AmPmStart"))
+    select.select_by_value("AM")
+    time.sleep(3.0)
+
+    select = Select(browser.find_element_by_id("HoursStart"))
+    select.select_by_value("7")
+    time.sleep(3.0)
+
+    select = Select(browser.find_element_by_id("MinutesStart"))
+    select.select_by_value("0")
+
 
 
 
